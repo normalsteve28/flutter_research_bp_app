@@ -7,5 +7,7 @@ const bookmarks = 'assets/icons/bookmarks.svg';
 const activity = 'assets/icons/activity.svg';
 const learn = 'assets/icons/learn.svg';
 const monitor = 'assets/icons/monitor.svg';
+const learnGo = 'assets/icons/learngo.svg';
+const bpDrawing = 'assets/icons/bp_man_drawing.svg';
 
 // these are the icon filepath put inside variables

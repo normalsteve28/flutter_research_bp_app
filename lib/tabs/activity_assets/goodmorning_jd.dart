@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 //This class contains the good morning text
 class GoodMorning extends StatelessWidget {
+  final String username;
+
+  GoodMorning(this.username);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +21,7 @@ class GoodMorning extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Text(
-            "John Doe",
+            "$username",
             style: TextStyle(
               color: Colors.black,
               fontSize: 30,

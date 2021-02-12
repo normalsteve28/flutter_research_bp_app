@@ -19,19 +19,16 @@ class NavBar extends StatelessWidget {
         tabs: [
           Tab(
             icon: new Container(
-              padding: EdgeInsets.all(5),
               child: SvgPicture.asset(activity),
             ),
           ),
           Tab(
             icon: new Container(
-              padding: EdgeInsets.all(3),
               child: SvgPicture.asset(monitor),
             ),
           ),
           Tab(
             icon: new Container(
-              padding: EdgeInsets.all(5),
               child: SvgPicture.asset(learn),
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomePageTwo extends StatelessWidget {
+class MonitorPageTwo extends StatelessWidget {
   //This class is the page that shows up when you press Start
   @override
   Widget build(BuildContext context) {
