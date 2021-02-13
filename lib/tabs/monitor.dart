@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 
 import './startbutton.dart'; // contains the start button
 
-class HomePage extends StatelessWidget {
+class Monitor extends StatelessWidget {
+  final String username;
+
+  Monitor(this.username);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,9 +38,9 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 // This SizedBox contains good morning text
                 width: 275,
-                height: 45,
+                height: 100,
                 child: Text(
-                  "Good Morning",
+                  "Good Morning, $username",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,

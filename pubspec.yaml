@@ -31,6 +31,7 @@ dependencies:
   flutter_svg: ^0.19.2+1
   english_words: ^3.1.5
   http: ^0.12.2
+  flutter_facebook_login: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +61,8 @@ flutter:
     - assets/icons/activity.svg
     - assets/icons/learn.svg
     - assets/icons/monitor.svg
+    - assets/icons/heartgo.svg
+    - assets/icons/bp_man_drawing.svg
     - assets/fonts/Montserrat-Regular.ttf
     - assets/fonts/Montserrat-Semibold.ttf
     - assets/fonts/Montserrat-Medium.ttf
