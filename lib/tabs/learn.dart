@@ -49,25 +49,22 @@ class AppBarwithIcon extends StatelessWidget {
   }
 }
 
-class ArticleList extends StatefulWidget {
-  @override
-  _ArticleListState createState() => _ArticleListState();
-}
-
-class _ArticleListState extends State<ArticleList> {
+class ArticleList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 249,
-          height: 248,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(36),
-            color: Colors.white,
+    return Center(
+      child: Column(
+        children: [
+          Container(
+            width: 249,
+            height: 248,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(36),
+              color: Colors.white,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
