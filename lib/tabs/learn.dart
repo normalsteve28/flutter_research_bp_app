@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 
 import '../assets.dart'; // Contains svg icons
+import '../see_all_buttons.dart';
 
 class Learn extends StatelessWidget {
   @override
@@ -56,6 +57,7 @@ class ArticleList extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            margin: EdgeInsets.all(8),
             width: 249,
             height: 248,
             decoration: BoxDecoration(
@@ -63,6 +65,19 @@ class ArticleList extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          Row(
+            children: [
+              Text(
+                "Heart Health 101",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontFamily: "Montserrat",
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

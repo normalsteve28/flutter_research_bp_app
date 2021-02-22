@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'activity_assets/activity_person.dart'; // this contains the icon
 import 'activity_assets/goodmorning_jd.dart'; // this contains the good morning text with name
 import 'activity_assets/history_boxes.dart'; // Contains history box
-import 'activity_assets/see_all_buttons.dart'; // SEE ALL button handler
+import '../see_all_buttons.dart'; // SEE ALL button handler
 
 class Activity extends StatelessWidget {
   final String username;

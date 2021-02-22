@@ -21,7 +21,7 @@ class GoodMorning extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 30,
+            height: 40,
             width: 200,
             child: Expanded(
               child: SingleChildScrollView(

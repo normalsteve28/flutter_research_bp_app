@@ -11,6 +11,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var isLoggedIn = false;
+  // This has no use. Supposedly, if the person has a username, this will turn true.
+  // That way, when they already signed up, the app will not return to the sign up page every time
+  // the app restarts.
 
   @override
   Widget build(BuildContext context) {

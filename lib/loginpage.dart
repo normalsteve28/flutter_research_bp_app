@@ -99,11 +99,51 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   // this is the form that accepts a name and passes it onto the Homepage
   final myController = TextEditingController();
-  String username;
+  String username; // The username that the user submits
+  Color buttonColor = Colors
+      .grey; // This is the variable that holds the color of the sign up button
+  Color buttonTextColor = Colors
+      .black; // This is the variable that holds the text color of sign up button
+  Function
+      buttonFunction; // This variable holds the function of the sign up button
+
+  void checkIfTextEmpty() {
+    //This function checks if the text field is empty and assigns color and function to the button
+    // depending on whether or not the text field is empty
+    if (myController.text != "") {
+      // If text is not empty, then button is pink and text is white, leads to homepage when pressed
+      setState(() {
+        buttonColor = Color(0xfffe7575);
+        buttonTextColor = Colors.white;
+        buttonFunction = () {
+          username = myController.text;
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home(username: username)),
+          );
+        };
+      });
+    } else {
+      // If text is empty, then button will be grey and text will be black, buttonFunction will be null
+      setState(() {
+        buttonColor = Colors.grey;
+        buttonTextColor = Colors.black;
+        buttonFunction = null;
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Calls the checkIfTextEmpty function every time the text changes.
+    myController.addListener(checkIfTextEmpty);
+  }
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
+    // Cleans up the controller when the widget is disposed.
     myController.dispose();
     super.dispose();
   }
@@ -123,6 +163,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
           Container(
+            // This container is what makes the button the shape and color it is
             margin: EdgeInsets.only(top: 20, bottom: 20),
             width: 269,
             height: 59,
@@ -135,23 +176,17 @@ class _LoginFormState extends State<LoginForm> {
                   offset: Offset(0, 4),
                 ),
               ],
-              color: Color(0xfffe7575),
+              color: buttonColor,
             ),
             child: TextButton(
-              // Sign Up button that heads to home
-              onPressed: () {
-                username = myController.text;
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Home(username: username)),
-                );
-              },
+              // This Sign Up button fills the previous container
+              // This button heads to home if TextField is not empty
+              onPressed: buttonFunction,
               child: Text(
                 "Sign up",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: buttonTextColor,
                   fontSize: 18,
                   fontFamily: "Nunito",
                   fontWeight: FontWeight.w600,

@@ -38,9 +38,11 @@ class Monitor extends StatelessWidget {
               SizedBox(
                 // This SizedBox contains good morning text
                 width: 275,
-                height: 100,
+                height: 40,
                 child: SingleChildScrollView(
                   // This is so that text will scroll if it is bigger than the box
+                  scrollDirection: Axis.horizontal,
+                  primary: true,
                   child: Text(
                     "Good Morning, $username",
                     textAlign: TextAlign.center,
