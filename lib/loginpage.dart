@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import './assets.dart';
-import './homepage.dart';
+import 'username.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -77,7 +77,7 @@ class LoginPage extends StatelessWidget {
                               fontWeight: FontWeight.w700),
                         ),
                       ),
-                      LoginForm()
+                      LoginForm() // This contains textfield and signup button
                     ],
                   ),
                 ),
@@ -98,8 +98,8 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
   // this is the form that accepts a name and passes it onto the Homepage
-  final myController = TextEditingController();
-  String username; // The username that the user submits
+  final myController =
+      TextEditingController(); // The username that the user submits
   Color buttonColor = Colors
       .grey; // This is the variable that holds the color of the sign up button
   Color buttonTextColor = Colors
@@ -117,9 +117,9 @@ class _LoginFormState extends State<LoginForm> {
         buttonTextColor = Colors.white;
         buttonFunction = () {
           username = myController.text;
-          Navigator.push(
+          Navigator.pushReplacementNamed(
             context,
-            MaterialPageRoute(builder: (context) => Home(username: username)),
+            "/login", //This is a route, its value can be found in main (it heads to homepage)
           );
         };
       });
@@ -155,7 +155,7 @@ class _LoginFormState extends State<LoginForm> {
         children: [
           Container(
             padding: EdgeInsets.all(10),
-            child: TextField(
+            child: TextFormField(
               decoration: InputDecoration(
                 hintText: "Enter your name here",
               ),

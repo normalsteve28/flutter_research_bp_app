@@ -23,22 +23,20 @@ class GoodMorning extends StatelessWidget {
           SizedBox(
             height: 40,
             width: 200,
-            child: Expanded(
-              child: SingleChildScrollView(
-                // The Expanded and ScrollView allow text to scroll if it's too big
-                scrollDirection: Axis.horizontal,
-                primary: true,
-                child: Text("$username",
-                    maxLines: 1,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w600,
-                    ),
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.clip),
-              ),
+            child: SingleChildScrollView(
+              // The Expanded and ScrollView allow text to scroll if it's too big
+              scrollDirection: Axis.horizontal,
+              primary: true,
+              child: Text("$username",
+                  maxLines: 1,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w600,
+                  ),
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.clip),
             ),
           ),
         ],

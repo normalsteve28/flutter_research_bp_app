@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'loginpage.dart'; // Imports login page
+import 'homepage.dart'; // Imports homepage
+import 'username.dart'; // Imports username
 
 void main() => runApp(MyApp());
 
@@ -20,6 +22,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       color: Colors.yellow,
       home: LoginPage(),
+      routes: {
+        "/login": (_) => Home(username: username)
+      }, // This is done so that it won't return to the login page (Fixes the Learn page back button problem)
     );
   }
 }

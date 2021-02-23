@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:http/http.dart' as http;
 
 import '../assets.dart'; // Contains svg icons
 import '../see_all_buttons.dart';
@@ -14,7 +13,7 @@ class Learn extends StatelessWidget {
             AppBarwithIcon(), // App Bar with Text and Icon Buttons (search, "Learn", and bookmark button)
         backgroundColor: Color(0xffFE7575),
       ),
-      body: ArticleList(), // List of articles
+      body: LearnPage(), // List of articles
       backgroundColor: Colors.pink[50],
     );
   }
@@ -50,7 +49,7 @@ class AppBarwithIcon extends StatelessWidget {
   }
 }
 
-class ArticleList extends StatelessWidget {
+class LearnPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -66,16 +65,21 @@ class ArticleList extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Heart Health 101",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 12,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w500,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Heart Health 101",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
+              SeeAllButton(null)
             ],
           )
         ],
