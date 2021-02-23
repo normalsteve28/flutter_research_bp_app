@@ -26,6 +26,7 @@ class GoodMorning extends StatelessWidget {
             child: SingleChildScrollView(
               // The Expanded and ScrollView allow text to scroll if it's too big
               scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(),
               primary: true,
               child: Text("$username",
                   maxLines: 1,

@@ -5,11 +5,16 @@ import 'activity_assets/goodmorning_jd.dart'; // this contains the good morning 
 import 'activity_assets/history_boxes.dart'; // Contains history box
 import '../see_all_buttons.dart'; // SEE ALL button handler
 
-class Activity extends StatelessWidget {
+class Activity extends StatefulWidget {
   final String username;
 
   Activity(this.username);
 
+  @override
+  _ActivityState createState() => _ActivityState();
+}
+
+class _ActivityState extends State<Activity> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,8 +26,8 @@ class Activity extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ActivityPerson(), // This widget is the icon
-              GoodMorning(
-                  username), // This widget is the good morning text with the name
+              GoodMorning(widget
+                  .username), // This widget is the good morning text with the name
             ],
           ),
           Row(

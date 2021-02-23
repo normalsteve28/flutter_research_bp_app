@@ -42,6 +42,7 @@ class Monitor extends StatelessWidget {
                 child: SingleChildScrollView(
                   // This is so that text will scroll if it is bigger than the box
                   scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
                   primary: true,
                   child: Text(
                     "Good Morning, $username",
