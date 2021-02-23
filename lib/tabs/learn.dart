@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../assets.dart'; // Contains svg icons
 import '../see_all_buttons.dart';
 import 'learn_assets/articlelist.dart';
+import 'learn_assets/articles.dart';
 
 class Learn extends StatelessWidget {
   @override
@@ -61,66 +62,76 @@ class _LearnPageState extends State<LearnPage> {
     return Center(
       child: Column(
         children: [
-          Container(
-            //This container is the "First Aid for Heart Attack"
-            width: 262,
-            height: 248,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Container(
-                      width: 249,
-                      height: 248,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(36),
-                        color: Colors.white,
-                      ),
-                      padding: const EdgeInsets.only(
-                        bottom: 59,
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 249,
-                            height: 189,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(36),
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [Colors.white, Color(0x00ffffff)],
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ArticleHandler(
+                        "First Aid for Heart Attack", articles[0])),
+              );
+            },
+            child: Container(
+              //This container is the "First Aid for Heart Attack"
+              width: 262,
+              height: 248,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Positioned.fill(
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                        width: 249,
+                        height: 248,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(36),
+                          color: Colors.white,
+                        ),
+                        padding: const EdgeInsets.only(
+                          bottom: 59,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 249,
+                              height: 189,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(36),
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [Colors.white, Color(0x00ffffff)],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Positioned(
-                  left: 5,
-                  top: 197,
-                  child: SizedBox(
-                    width: 256,
-                    height: 33,
-                    child: Text(
-                      "First Aid for Heart Attack",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontFamily: "Montserrat",
-                        fontWeight: FontWeight.w600,
+                  Positioned(
+                    left: 5,
+                    top: 197,
+                    child: SizedBox(
+                      width: 256,
+                      height: 33,
+                      child: Text(
+                        "First Aid for Heart Attack",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Row(
