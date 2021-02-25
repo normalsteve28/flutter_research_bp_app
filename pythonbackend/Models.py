@@ -53,6 +53,7 @@ class History(db.Model):
     date_time = db.Column(db.DateTime(), nullable = False, default = datetime.utcnow())
     systolic_pressure = db.Column(db.Float())
     diastolic_pressure = db.Column(db.Float())
+    heart_rate = db.Column(db.Float())
     
 
   
@@ -72,7 +73,8 @@ class History(db.Model):
         "person_id": self.person_id,
         "date_time": self.date_time,
         "systolic_pressure": self.systolic_pressure,
-        "diastolic_pressure": self.diastolic_pressure
+        "diastolic_pressure": self.diastolic_pressure,
+        "heart_rate": self.heart_rate
         }
 
   
