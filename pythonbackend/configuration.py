@@ -1,5 +1,5 @@
 import os 
-from access import username, password
+from access import username, password, database #probably unnecessary, edit your secret values according to your likes
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 SQLALCHEMY_ECHO = True
