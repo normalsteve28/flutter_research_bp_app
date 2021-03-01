@@ -49,7 +49,7 @@ class History(db.Model):
     
     #table
     id = db.Column(db.Integer(), primary_key = True)
-    person_id = db.Column(db.Integer, db.ForeignKey('person.id'))
+    person_id = db.Column(db.Integer, db.ForeignKey('users.id'), unique = True)
     date_time = db.Column(db.DateTime(), nullable = False, default = datetime.utcnow())
     systolic_pressure = db.Column(db.Float())
     diastolic_pressure = db.Column(db.Float())
