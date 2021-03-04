@@ -76,5 +76,6 @@ class History(db.Model):
         "diastolic_pressure": self.diastolic_pressure,
         "heart_rate": self.heart_rate
         }
-
+class Map(db.Model):
+    pass
   
