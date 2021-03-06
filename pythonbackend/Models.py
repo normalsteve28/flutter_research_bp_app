@@ -48,12 +48,12 @@ class History(db.Model):
     __tablename__ = 'history'
     
     #table
-    id = db.Column(db.Integer(), primary_key = True)
-    person_id = db.Column(db.Integer, db.ForeignKey('users.id'), unique = True)
-    date_time = db.Column(db.DateTime(), nullable = False, default = datetime.utcnow())
-    systolic_pressure = db.Column(db.Float())
-    diastolic_pressure = db.Column(db.Float())
-    heart_rate = db.Column(db.Float())
+    id = db.Column(db.Integer(), primary_key = True) #int
+    person_id = db.Column(db.Integer, db.ForeignKey('users.id')) #foreign key to users table #int
+    date_time = db.Column(db.DateTime(), nullable = False, default = datetime.utcnow())  #timestamp
+    systolic_pressure = db.Column(db.Float()) #float
+    diastolic_pressure = db.Column(db.Float()) #float
+    heart_rate = db.Column(db.Float()) #float
     
 
   
@@ -76,6 +76,33 @@ class History(db.Model):
         "diastolic_pressure": self.diastolic_pressure,
         "heart_rate": self.heart_rate
         }
-class Map(db.Model):
-    pass
-  
+
+class Maps(db.Model):
+    #Puts table name in db called "maps"
+    __tablename__ = 'maps'
+    
+    #table
+    id = db.Column(db.Integer(), primary_key = True) #int
+    map_id = db.Column(db.Integer, db.ForeignKey('users.id')) #foreign key to users table
+    location = db.Column(db.String()) #String
+    nearby_locations = db.Column(db.String()) #String
+    
+    def __init__(self,map_id, location, nearby_locations ):
+        self.map_id = map_id
+        self.location = location
+        self.nearby_location = nearby_locations
+       
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+   
+    def serialize(self):
+        return {
+        "id": self.id,
+        "map_id": self.map_id,
+        "location": self.location,
+        "nearby_location": self.nearby_location
+        }
+
+
+
