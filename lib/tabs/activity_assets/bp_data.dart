@@ -8,9 +8,9 @@ Therefore, for these history boxes to show the most recent data, the newer data
 should be added at the FRONT instead.
 */
 
-List<int> sys = [2];
-List<int> dia = [4];
-List<int> heartRate = [5];
+List<int> sys = [];
+List<int> dia = [];
+List<int> heartRate = [];
 bool dataIsEqualNotEmpty = (sys.length > 0 &&
     dia.length > 0 &&
     heartRate.length > 0 &&
