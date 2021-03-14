@@ -67,8 +67,13 @@ class _LearnPageState extends State<LearnPage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => ArticleHandler(
-                        "First Aid for Heart Attack", articles[0])),
+                  builder: (context) => ArticleHandler(
+                    "First Aid for Heart Attack",
+                    articles[0],
+                    images[0],
+                    imageSource[0],
+                  ),
+                ),
               );
             },
             child: Container(
@@ -106,6 +111,11 @@ class _LearnPageState extends State<LearnPage> {
                                   end: Alignment.bottomCenter,
                                   colors: [Colors.white, Color(0x00ffffff)],
                                 ),
+                              ),
+                              child: Padding(
+                                // Image
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.asset(heartAttack),
                               ),
                             ),
                           ],

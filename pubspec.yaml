@@ -62,6 +62,18 @@ flutter:
     - assets/icons/monitor.svg
     - assets/icons/heartgo.svg
     - assets/icons/bp_man_drawing.svg
+    - assets/icons/backarrow.svg
+    - assets/articleimages/heartattack.jpg
+    - assets/articleimages/hypertension.png
+    - assets/articleimages/bloodpressure.png
+    - assets/articleimages/hypertension_flip.png
+    - assets/articleimages/heartrate.png
+    - assets/articleimages/hearthealthy.png
+    - assets/articleimages/hypertension.svg
+    - assets/articleimages/bloodpressure.svg
+    - assets/articleimages/hypertension_flip.svg
+    - assets/articleimages/heartrate.svg
+    - assets/articleimages/hearthealthy.svg
     - assets/fonts/Montserrat-Regular.ttf
     - assets/fonts/Montserrat-Semibold.ttf
     - assets/fonts/Montserrat-Medium.ttf
